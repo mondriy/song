@@ -1,38 +1,63 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(13, 13, 20);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.disk {
+  background-image: url("Home Alone.jpg");
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  width: 60vw;
+  height: 60vw;
+
+  overflow: hidden;
+
+  -webkit-box-shadow: 4px 5px 8px 0px rgba(34, 60, 80, 0.15);
+  -moz-box-shadow: 4px 5px 8px 0px rgba(34, 60, 80, 0.15);
+  box-shadow: 4px 5px 8px 0px rgba(34, 60, 80, 0.15);
+
+  animation-name: rotation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-@keyframes App-logo-spin {
-  from {
+.name-container {
+  margin-top: 3em;
+}
+
+.name {
+  color: #fff;
+  font-weight: 300;
+  font-size: 26px;
+}
+
+.paused {
+  -webkit-animation-play-state: paused !important;
+  -moz-animation-play-state: paused !important;
+  -o-animation-play-state: paused !important; 
+  animation-play-state: paused !important;
+}
+
+@keyframes rotation {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
